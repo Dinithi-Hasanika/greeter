@@ -1,13 +1,13 @@
 import ballerina/http;
 
-type Album readonly & record {|
+type Album record {|
     string title;
     string artist;
 |};
 
 //listener http:Listener httpListener = new (9090);
 
-table<Album> key(title) albums = table [
+table<Album> albums = table [
     {title: "Blue Train", artist: "John Coltrane"},
     {title: "Jeru", artist: "Gerry Mulligan"}
 ];
