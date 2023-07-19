@@ -1,5 +1,4 @@
 import ballerina/http;
-import ballerina/io;
 
 type Album readonly & record {|
     string title;
@@ -16,9 +15,9 @@ table<Album> key(title) albums = table [
 service / on httpListener {
 
     resource function get albums(@http:Header string Authorization) returns Album[] {
-         io:println("Request came with following token");
-        io:println(Authorization);
-        io:println(" ");
+        //  io:println("Request came with following token");
+        // io:println(Authorization);
+        // io:println(" ");
         return albums.toArray();
     }
 
