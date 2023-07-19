@@ -5,7 +5,7 @@ info:
 paths:
   /albums:
     get:
-      summary: Greet a person
+      summary: albumbs
       description: Greet a person by name
       responses:
         default:
