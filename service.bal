@@ -5,14 +5,14 @@ type Album readonly & record {|
     string artist;
 |};
 
-listener http:Listener httpListener = new (9090);
+//listener http:Listener httpListener = new (9090);
 
 table<Album> key(title) albums = table [
     {title: "Blue Train", artist: "John Coltrane"},
     {title: "Jeru", artist: "Gerry Mulligan"}
 ];
 
-service / on httpListener {
+service / on new http:Listener(9090) {
 
     resource function get albums(@http:Header string Authorization) returns Album[] {
         //  io:println("Request came with following token");
