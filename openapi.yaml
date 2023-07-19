@@ -1,0 +1,20 @@
+openapi: "3.0.0"
+info:
+  title: Greeting Service
+  version: 1.0.0
+paths:
+  /albums:
+    get:
+      summary: Greet a person
+      description: Greet a person by name
+      responses:
+        default:
+          description: default
+        '200':
+          description: Successful response
+          content:
+            text/json:
+              schema:
+                type: string
+      deprecated: false
+      security: []
