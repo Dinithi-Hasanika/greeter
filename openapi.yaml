@@ -3,21 +3,13 @@ info:
   title: Greeting Service
   version: 1.0.0
 paths:
-  /greeter/greet:
+  /albums:
     get:
       summary: Greet a person
       description: Greet a person by name
-      tags:
-        - greeting
-      parameters:
-        - name: name
-          in: query
-          description: Name of the person to greet
-          required: false
-          schema:
-            type: string
       responses:
         default:
+          description: default
         '200':
           description: Successful response
           content:
