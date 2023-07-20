@@ -15,9 +15,6 @@ table<Album> albums = table [
 service / on new http:Listener(9090) {
 
     resource function get albums(@http:Header string Authorization) returns string {
-        //  io:println("Request came with following token");
-        // io:println(Authorization);
-        // io:println(" ");
         return "Welcome";
     }
 
